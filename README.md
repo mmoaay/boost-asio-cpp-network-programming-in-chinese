@@ -1,5 +1,5 @@
 #实战出精华
-*用具体的C++网络编程例子来提升你的逼格*
+*在具体的C++网络编程中提升你的逼格*
 
 *John Torjo*
 
@@ -12,14 +12,14 @@ Copyright © 2013 Packt Publishing
 ---
 
 ##关于作者
-做为一个权威的C++专家，在**John Torjo**超过15年的编程生涯中，除了偶尔用C#和Java写程序，他把大部分的时间都贡献给了C++。
+做为权威的C++专家，除了偶尔用C#和Java写程序，**John Torjo**把他超过15年编程生涯中的大部分时间都贡献给了C++。
 
-他也很喜欢在C++ Users Journal和其他杂志上写一些关于编程的文章。
+他也很喜欢在C++ Users Journal和其他杂志上写一些编程相关的文章。
 
-闲暇的时候，他喜欢玩扑克和开快车。他有很多自由职业，其中有一个就把他对扑克和编程的爱好结合起来。你可以通过[john.code@torjo.com](john.code@torjo.com)联系到他。
+闲暇的时候，他喜欢玩扑克、开快车。他有很多个自由职业，其中一个就把他的两个爱好结合在一起，一个是玩扑克，另外一个是编程。如果你想联系他，可以发邮件到[john.code@torjo.com](john.code@torjo.com)。
 
 ---
-我要感谢我的朋友Alexandru Chis, Aurelian Hale, Bela Tibor Bartha, Cristian Fatu, Horia Uifaleanu, Nicolae Ghimbovschi以及Ovidiu Deac对本书提出的反馈和意见。同时我也要感谢Packt各位对我时不时错过截稿日期行为的理解。然后最需要感谢的是Chris Kohlhoff，Boost.Asio的作者，是他写出了一个如此伟大的库。
+我要感谢我的朋友Alexandru Chis, Aurelian Hale, Bela Tibor Bartha, Cristian Fatu, Horia Uifaleanu, Nicolae Ghimbovschi以及Ovidiu Deac。感谢他们对本书提出的反馈和意见。同时我也要感谢Packt公司各位对我频繁错过截稿日期行为的包容。然后最需要感谢的是Chris Kohlhoff，Boost.Asio的作者，是他写出了如此伟大的库。
 
 把这本书献给我最好的朋友Darius。
 
@@ -27,7 +27,7 @@ Copyright © 2013 Packt Publishing
 ##关于评审员
 Béla Tibor Bartha
 
-一个使用过各种技术和语言进行开发的专业软件工程师。尽管在过去的4年里，他做的是iOS和OSX应用开发，但是C++陪伴他度过了他早期个人游戏项目开发的激情岁月。
+一个使用过多种技术和语言进行开发的专业软件工程师。尽管在过去的4年里，他做的是iOS和OSX应用开发，但是C++陪伴他度过了早期个人游戏项目开发的激情岁月。
 
 ---
 我要感谢John，因为他我才能做这本书的评审
@@ -35,7 +35,7 @@ Béla Tibor Bartha
 ---
 Nicolae Ghimbovschi
 
-一个参加各种各样的C++项目超过5年的天才个人开发者。他主要参与一些企业通信工程的项目。他是一个狂热的Linux爱好者，他喜欢利用不同的操作系统、脚本工具、编程语言进行测试和实验。除了编程，他还喜欢骑自行车、瑜伽和冥想。
+一个参加各类C++项目超过5年的天才个人开发者。他主要参与一些企业通信工程的项目。作为一个狂热的Linux爱好者，他喜欢利用不同的操作系统、脚本工具和编程语言进行测试和实验。除了编程，他还喜欢骑自行车、瑜伽和冥想。
 
 ---
 我要感谢John让我来评审这本书
@@ -171,37 +171,37 @@ Nicolae Ghimbovschi
 
 ---
 ##前言
-网络编程由来已久，并且是一个极富挑战性的任务。Boost.Asio对网络编程做了一个极好的抽象，从而保证你用少量的编程就可以创造出一个优雅的客户端/服务端软件。在创造的过程中，它能让你体会到极大的乐趣。而更为有益的是：Boost.Asio包含了一些非网络的特性，用Boost.Asio写出来的代码紧凑、易读，而且如果你按照我在书中所讲的来做，你的代码会无懈可击。
+网络编程由来已久，并且是一个极富挑战性的任务。Boost.Asio对网络编程做了一个极好的抽象，从而保证只需要少量的编程就可以实现一个优雅的客户端/服务端软件。在实现的过程中，它能让你体会到极大的乐趣。而且更为有益的是：Boost.Asio包含了一些非网络的特性，用Boost.Asio写出来的代码紧凑、易读，而且如果你按照我在书中所讲的来做，你的代码会无懈可击。
 
 这本书涵盖了什么？
 
 *第一章：Boost.Asio入门*将告诉你Boost.Asio是什么？怎么编译它？顺带着会有一些例子。你会发现Boost.Asio不仅仅是一个网络库。同时你也会接触到Boost.Asio中最核心的类io_service。
 
-*第二章：Boost.Asio基本原理*包含了你必须了解的内容：什么时候用Boost.Asio？我们将深入了解异步编程——一种比同步更需要技巧，且更有乐趣的编程方式。这一章也是在开发你自己的网络应用时需要回过头来把里面的内容作为参考的一章。
+*第二章：Boost.Asio基本原理*包含了你必须了解的内容：什么时候用Boost.Asio？我们将深入了解异步编程——一种比同步更需要技巧，且更有乐趣的编程方式。这一章也是在开发你自己的网络应用时可以作为参考的一章。
 
-*第三章：回显服务端/客户端*将会告诉你如何实现一个小的客户端/服务端应用；也许这会是你写过的最简单的客户端/服务端应用。回显应用就是一个把客户端发过来的任何消息发送回去然后关闭客户端连接的服务。我们会先实现一个同步的应用，然后再实现一个异步的应用，这样你就可以非常容易地看到它们之间的不同。
+*第三章：回显服务端/客户端*将会告诉你如何实现一个小的客户端/服务端应用；也许这会是你写过的最简单的客户端/服务端应用。回显应用就是把客户端发过来的消息发送回去然后关闭客户端连接的服务。我们会先实现一个同步的版本，然后再实现一个异步的版本，这样就可以非常容易地看到它们之间的不同。
 
-*第四章：客户端和服务端*会深入讨论如何用Boost.Asio创建一个简单的客户端/服务端应用。我们将讨论如何避免诸如内存泄漏和死锁的缺陷。所有的程序都是简单的框架，从而使你更方便地对他们进行扩展并满足你的需求。
+*第四章：客户端和服务端*会深入讨论如何用Boost.Asio创建一个简单的客户端/服务端应用。我们将讨论如何避免诸如内存泄漏和死锁的缺陷。所有的程序都只是实现一个简单的框架，从而使你能更方便地对它们进行扩展以满足你的需求。
 
-*第五章：同步VS异步*会带你了解那些当你选择同步还是异步方式时需要考虑的事情。首先就是避免混淆它们。在这一章，我们会发现每个类型应用的实现、测试和调试是多么的容易。
+*第五章：同步VS异步*会带你了解在同步和异步方式之间做选择时需要考虑的事情。首要的事情就是不要混淆它们。在这一章，我们会发现实现、测试和调试每个类型应用是非常容易的。
 
-*第六章：Boost.Asio的其他特性*将带你了解Boost.Asio一些不为人知的特性。你会发现，虽然std streams和streambufs有一点点难用，但是却表现出了它们得天独厚的优势。最后，你会看到姗姗来迟的Boost.Asio协程的入口，它可以让你用一种更易读的方式来写异步代码。（就好像它是同步的一样）
+*第六章：Boost.Asio的其他特性*将带你了解Boost.Asio一些不为人知的特性。你会发现，虽然std streams和streambufs有一点点难用，但是却表现出了它们得天独厚的优势。最后，是姗姗来迟的Boost.Asio协程，它可以让你用一种更易读的方式来写异步代码。（就好像写同步代码一样）
 
-*第七章：Boost.Asio进阶*会处理一些Boost.Asio的进阶问题。虽然在日常编程中你不需要深入研究它们，但是了解它们对你有益无害（Boost.Asio高级调试，SSL，Windows特性，POSIX特性等）。
+*第七章：Boost.Asio进阶*包含了一些Boost.Asio进阶问题的处理。虽然在日常编程中不需要深入研究它们，但是了解它们对你有益无害（Boost.Asio高级调试，SSL，Windows特性，POSIX特性等）。
 
 ###读这本书你需要准备什么？
 
-为了编译Boost.Asio以及运行本书中的例子，你需要一个现代编译器。例如，Visual Studio 2008及其以上版本或者g++ 4.4及其以上版本
+如果要编译Boost.Asio以及运行本书中的例子，你需要一个现代编译器。例如，Visual Studio 2008及其以上版本或者g++ 4.4及其以上版本
 
 ###这本书是为谁准备的？
 
-这本书对于那些需要进行网络编程却不想深入研究复杂的原始网络API的开发者来说是一个福音。所有你需要的只是Boost.Asio提供的一个简单抽象。作为著名的Boost C++库的一部分，你只需要额外添加几个#include文件即可转换到Boost.Asio。
+这本书对于那些需要进行网络编程却不想深入研究复杂的原始网络API的开发者来说是一个福音。所有你需要的只是Boost.Asio提供的一套API。作为著名Boost C++库的一部分，你只需要额外添加几个#include文件即可转换到Boost.Asio。
 
 在读这本书之前，你需要熟悉Boost核心库的一些知识，例如Boost智能指针、boost::noncopyable、Boost Functors、Boost Bind、shared_ from_this/enabled_shared_from_this和Boost线程（线程和互斥量）。同时还需要了解Boost的Date/Time。读者还需要知道阻塞的概念以及“非阻塞”操作。
 
 ###约定
 
-你会发现本书中用不同样式的文字来区分不同种类的信息。这里给出这些样式的例子以及它们的解释。
+本书使用不同样式的文字来区分不同种类的信息。这里给出这些样式的例子以及它们的解释。
 
 文本中的代码会这样显示：“通常一个*io_service*的例子就足够了”。
 
@@ -226,9 +226,9 @@ async_write(stream, buffer [, extra options], handler)
 
 ###读者反馈
 
-我们欢迎来自读者的反馈。告诉我们你对这本书的看法——你喜欢哪部分，不喜欢哪部分。读者的反馈对我们非常重要，它能让我们写出对读者帮助最大的书籍。
+我们欢迎来自读者的反馈。告诉我们你对这本书的看法——你喜欢哪部分，不喜欢哪部分。读者的反馈对我们非常重要，它能让我们写出对读者帮助更大的书。
 
-你只需要发送一封邮件到[feedback@packtpub.com](feedback@packtpub.com)即可进行一般的反馈，注意在邮件的主题中注明书名。
+你只需要发送一封邮件到[feedback@packtpub.com](feedback@packtpub.com)即可进行反馈，注意在邮件的主题中注明书名。
 
 如果你有一个擅长的专题，想撰写一本书或者为某本书做贡献。请阅读我们在[www.packtpub.com/authors](www.packtpub.com/authors)上的作者指引。
 
@@ -242,18 +242,18 @@ async_write(stream, buffer [, extra options], handler)
 
 ###纠错
 
-尽管我们已经尽最大的努力去保证书中内容的准确性，但是错误始终是存在的。如果你在我们的书籍中发现了错误——也许是文字，也许是代码——如果你能将它们报告给我们，我们将不胜感激。这样的话，你不仅能让帮助其他读者避免一些疑惑，同时也能帮助我们改进这本书的下一个版本。如果你发现任何需要纠正的地方，访问[http://www.packtpub.com/submit-errata](http://www.packtpub.com/submit-errata)，选择你的书籍，点击**errata submission form**链接，然后输入详细的纠错信息来将错误报告给我们。一经确定，你的提交就会通过并且纠错会上传到我们的网站，或者添加到那本书的纠错信息区域的纠错列表中。所有存在的纠错都可以访问[http://www.packtpub.com/support](http://www.packtpub.com/support)，然后通过选择书名的方式来查看。
+尽管我们已经尽最大的努力去保证书中内容的准确性，但是错误还是不可避免的。如果你在我们的书籍中发现了错误——也许是文字，也许是代码——如果你能将它们报告给我们，我们将不胜感激。这样的话，你不仅能帮助其他读者，同时也能帮助我们改进这本书的下一个版本。如果你发现任何需要纠正的地方，访问[http://www.packtpub.com/submit-errata](http://www.packtpub.com/submit-errata)，选择你的书籍，点击**errata submission form**链接，然后输入详细的纠错信息来将错误报告给我们。一经确定，你的提交就会通过，然后这个纠错就会被上传到我们的网站，或者添加到那本书的纠错信息区域的纠错列表中。所有已发现的纠错都可以访问[http://www.packtpub.com/support](http://www.packtpub.com/support)，然后通过选择书名的方式来查看。
 
 ###答疑
 
 如果你有关于本书任何方面的问题，你可以通过[questions@packtpub.com](questions@packtpub.com)联系我们。我们将尽我们最大的努力进行解答
 
 ##Boost.Asio入门
-首先，让我们先了解Boost.Asio是什么？怎么编译它？顺带着会有一些例子。你会发现Boost.Asio不仅仅是一个网络库。同时你也会接触到Boost.Asio中最核心的类——*io_service*。
+首先，让我们先来了解一下什么是Boost.Asio？怎么编译它？了解的过程中我们会给出一些例子。然后在发现Boost.Asio不仅仅是一个网络库的同时你也会接触到Boost.Asio中最核心的类——*io_service*。
 ###什么是Boost.Asio
 简单来说，Boost.Asio是一个跨平台的、主要用于网络和其他一些底层输入/输出编程的C++库。
 
-计算机网络的设计方式有很多种，但是Boost.Asio的的方式远远优于它们。它在2005年就被包含进Boost，然后被大量Boost的用户测试并在很多项目中使用，比如Remobo([http://www.remobo.com](http://www.remobo.com))，可以让你创建你自己的**即时私有网络(IPN)**，libtorrent([http://www.rasterbar.com/products/libtorrent]([http://www.rasterbar.com/products/libtorrent](http://www.rasterbar.com/products/libtorrent)))一个实现了比特流客户端的库，PokerTH ([http://www.pokerth.net](http://www.pokerth.net))一个支持LAN和互联网对战的纸牌游戏。
+计算机网络的设计方式有很多种，但是Boost.Asio的的方式远远优于其它的设计方式。它在2005年就被包含进Boost，然后被大量Boost的用户测试并在很多项目中使用，比如Remobo([http://www.remobo.com](http://www.remobo.com))，可以让你创建你自己的**即时私有网络(IPN)**的应用，libtorrent([http://www.rasterbar.com/products/libtorrent]([http://www.rasterbar.com/products/libtorrent](http://www.rasterbar.com/products/libtorrent)))一个实现了比特流客户端的库，PokerTH ([http://www.pokerth.net](http://www.pokerth.net))一个支持LAN和互联网对战的纸牌游戏。
 
 Boost.Asio在网络通信、COM串行端口和文件上成功地抽象了输入输出的概念。你可以基于这些进行同步或者异步的输入输出编程。
 
@@ -268,9 +268,9 @@ async_write(stream, buffer [, extra options], handler)
 
 作为一个跨平台的库，Boost.Asio可以在大多数操作系统上使用。能同时支持数千个并发的连接。其网络部分的灵感来源于**伯克利软件分发(BSD)socket**，它提供了一套可以支持**传输控制协议(TCP)**socket、**用户数据报协议(UDP)**socket和**Internet控制消息协议(IMCP)**socket的API，而且如果有需要，你可以对其进行扩展以支持你自己的协议。
 ###历史
-Boost.Asio在2003被开发出来，然后在2005年的12月的Boost 1.35版本中引入。原作者是Christopher M. Kohlhoff，你可以通过[chris@kohlhoff.com](chris@kohlhoff.com)联系他。
+Boost.Asio在2003被开发出来，然后于2005年的12月引入到Boost 1.35版本中。原作者是Christopher M. Kohlhoff，你可以通过[chris@kohlhoff.com](chris@kohlhoff.com)联系他。
 
-这个库在如下的平台和编译器上测试通过：
+这个库在以下的平台和编译器上测试通过：
 
 * 32-bit和64-bit Windows，使用Visual C++ 7.1及以上
 * Windows下使用MinGW
@@ -279,7 +279,7 @@ Boost.Asio在2003被开发出来，然后在2005年的12月的Boost 1.35版本�
 * Solaris下使用g++ 3.3及以上
 * MAC OS X 10.4以上下使用g++ 3.3及以上
 
-它或许能在诸如AIX 5.3，HP-UX 11i v3，QNX Neutrino 6.3，Solaris下使用Sun Studio 11以上，True64 v5.1，Windows下使用Borland C++ 5.9.2以上等平台上使用。（更多细节请咨询[www.boost.org](www.boost.org)）
+它也可能能在诸如AIX 5.3，HP-UX 11i v3，QNX Neutrino 6.3，Solaris下使用Sun Studio 11以上，True64 v5.1，Windows下使用Borland C++ 5.9.2以上等平台上使用。（更多细节请咨询[www.boost.org](www.boost.org)）
 ###依赖
 Boost.Asio依赖于如下的库：
 
@@ -289,10 +289,10 @@ Boost.Asio依赖于如下的库：
 * **OpenSSL**：使用这个库（可选的）以便你使用Boost.Asio提供的SSL支持。
 
 ###编译Boost.Asio
-Boost.Asio是一个仅有头文件的库。然而，考虑到你的编译器和程序的大小，你可以选择用源文件的方式来编译Boost.Asio。如果你想要这么做以减少编译时间，有如下几种方式：
+Boost.Asio是一个只需要引入头文件就可以使用的库。然而，考虑到你的编译器和程序的大小，你可以选择用源文件的方式来编译Boost.Asio。如果你想要这么做以减少编译时间，有如下几种方式：
 
-在你的一个源文件中，添加*#include "boost/asio/impl/src.hpp"*（如果你在使用SSL，添加*#include "boost/asio/ssl/impl/src.hpp"*）
-在你所有的源文件中，添加*#define BOOST_ASIO_SEPARATE_COMPILATION*
+在某个源文件中，添加*#include "boost/asio/impl/src.hpp"*（如果你在使用SSL，添加*#include "boost/asio/ssl/impl/src.hpp"*）
+在所有的源文件中，添加*#define BOOST_ASIO_SEPARATE_COMPILATION*
 
 注意Boost.Asio依赖于Boost.System，必要的时候还依赖于Boost.Regex，所以你需要用如下的指令先编译Boost：
 
@@ -302,13 +302,13 @@ Boost.Asio是一个仅有头文件的库。然而，考虑到你的编译器和�
 
 *bjam –with-system –with-thread –with-date_time –with-regex –with-serialization stage*
 
-这个库有大量的例子，你可以连同这本书中的例子一块看看。
+这个库有大量的例子，你可以连同本书中的例子一块看看。
 ### 重要的宏
-如果设置了*BOOST_ASIO_DISABLE_THREADS*；Boost.Asio中的线程支持都会失效，不管在编译Boost的过程中是否使用了线程支持。
+如果设置了*BOOST_ASIO_DISABLE_THREADS*；不管你是否在编译Boost的过程中使用了线程支持，Boost.Asio中的线程支持都会失效。
 ### 同步VS异步
 首先，异步编程和同步编程是非常不同的。在同步编程中，所有的操作都是顺序执行的，比如从socket中读取（请求），然后写入（回应）到socket中。每一个操作都是阻塞的。因为操作是阻塞的，所以为了不影响主程序，当在socket上读写时，通常会创建一个或多个线程来处理socket的输入/输出。因此，同步的服务端/客户端通常是多线程的。
 
-相反的，异步编程是事件驱动的。虽然你启动了一个操作，但是你不知道它何时会结束；它只是提供一个回调给你，当操作结束时，它会调用这个API，并返回操作结果。对于有着丰富经验的QT（诺基亚用来创建跨平台图形用户界面应用程序的库）程序员来说，这就是他们的第二天性。因此，在异步编程中，你只需要一个线程。
+相反的，异步编程是事件驱动的。虽然启动了一个操作，但是你不知道它何时会结束；它只是提供一个回调给你，当操作结束时，它会调用这个API，并返回操作结果。对于有着丰富经验的QT（诺基亚用来创建跨平台图形用户界面应用程序的库）程序员来说，这就是他们的第二天性。因此，在异步编程中，你只需要一个线程。
 
 因为中途做改变会非常困难而且容易出错，所以你在项目初期（最好是一开始）就得决定用同步还是异步的方式实现网络通信。不仅API有极大的不同，你程序的语意也会完全改变（异步网络通信通常比同步网络通信更加难以测试和调试）。你需要考虑是采用阻塞调用和多线程的方式（同步，通常比较简单），或者是更少的线程和事件驱动（异步，通常更复杂）。
 
@@ -621,7 +621,7 @@ Boost.Asio不仅仅可以用来做网络编程。它还有其他更多的特性�
 下一章我们将深入研究大量Boost.Asio中用来做网络编程的函数和类。同时我们也会学一些异步编程的诀窍。
 
 ##Boost.Asio基本原理
-这一章涵盖了在使用Boost.Asio时必须知道的一些事情。我们也将深入研究比同步编程更复杂、更有乐趣的异步编程。
+这一章涵盖了使用Boost.Asio时必须知道的一些事情。我们也将深入研究比同步编程更复杂、更有乐趣的异步编程。
 
 ###网络API
 这一部分包含了当使用Boost.Asio编写网络应用程序时必须知道的事情。
@@ -653,7 +653,7 @@ Boost.Asio的所有内容都包含在boost::asio命名空间或者其子命名�
 ip::address addr = ip::address::from_string("127.0.0.1");
 ```
 
-如果你想要连接到一个主机名，下面的代码片段不会起作用：
+如果你想通过一个主机名进行连接，下面的代码片段是无用的：
 ```
 // 抛出异常
 ip::address addr = ip::address::from_string("www.yahoo.com");
@@ -661,7 +661,7 @@ ip::address addr = ip::address::from_string("www.yahoo.com");
 
 
 ###端点
-端点是你用某个端口连接到的一个地址。不同的类型socket有它自己的*endpoint*类，比如*ip::tcp::endpoint、ip::udp::endpoint*和*ip::icmp::endpoint*
+端点是使用某个端口连接到的一个地址。不同类型的socket有它自己的*endpoint*类，比如*ip::tcp::endpoint、ip::udp::endpoint*和*ip::icmp::endpoint*
 
 如果想连接到本机的80端口，你可以这样做：
 ```
@@ -670,8 +670,8 @@ ip::tcp::endpoint ep( ip::address::from_string("127.0.0.1"), 80);
 
 有三种方式来让你建立一个端点：
 * *endpoint()*：这是默认构造函数，某些时候可以用来创建UDP/ICMP socket。
-* *endpoint(protocol, port)*：这个通常用来创建可以接受新连接的服务器端socket。
-* *endpoint(addr, port)*:这个创建了一个连接到某地址和端口的端点。
+* *endpoint(protocol, port)*：这个方法通常用来创建可以接受新连接的服务器端socket。
+* *endpoint(addr, port)*:这个方法创建了一个连接到某个地址和端口的端点。
 
 例子如下：
 ```
@@ -691,7 +691,7 @@ ip::tcp::endpoint ep = *iter;
 std::cout << ep.address().to_string() << std::endl;
 ```
 
-你可以用你需要的socket类型来替换tcp。首先，为你想要查询的名字创建一个查询器，然后用resolve()函数解析它。如果成功，它至少会返回一个入口。利用返回的迭代器，使用第一个入口或者遍历整个列表。
+你可以用你需要的socket类型来替换tcp。首先，为你想要查询的名字创建一个查询器，然后用resolve()函数解析它。如果成功，它至少会返回一个入口。你可以利用返回的迭代器，使用第一个入口或者遍历整个列表来拿到全部的入口。
 
 给定一个端点，可以获得他的地址，端口和IP协议（v4或者v6）：
 ```
@@ -727,7 +727,7 @@ boost::system::error_code ec;
 sync_func( arg1 arg2, ..., argN, ec); // 返回错误码
 ```
 
-在这一章剩下的部分，你会见到大量的同步函数。简单起见，我省略了返回错误码的重载，但是它们是存在的。
+在这一章剩下的部分，你会见到大量的同步函数。简单起见，我省略了有返回错误码的重载，但是不可否认它们确实是存在的。
 
 ###socket成员方法
 这些方法被分成了几组。并不是所有的方法都可以在各个类型的套接字里使用。这个部分的结尾将有一个列表来展示各个方法分别属于哪个socket类。
@@ -767,9 +767,9 @@ sock.close();
 * *async_receive(buffer, [flags,] handler)*：这个函数启动从套接字异步接收数据的操作。
 * *async_read_some(buffer,handler)*：这个函数和*async_receive(buffer, handler)*功能一样。
 * *async_receive_from(buffer, endpoint[, flags], handler)*：这个函数启动从一个指定端点异步接收数据的操作。
-* *async_send(buffer [, flags], handler)*：这个函数启动了一个异步发送缓冲区数据的功能。
+* *async_send(buffer [, flags], handler)*：这个函数启动了一个异步发送缓冲区数据的操作。
 * *async_write_some(buffer, handler)*：这个函数和a*sync_send(buffer, handler)*功能一致。
-* *async_send_to(buffer, endpoint, handler)*：这个函数启动了一个异步send缓冲区数据到指定端点的功能。
+* *async_send_to(buffer, endpoint, handler)*：这个函数启动了一个异步send缓冲区数据到指定端点的操作。
 * *receive(buffer [, flags])*：这个函数异步地从所给的缓冲区读取数据。在读完所有数据或者错误出现之前，这个函数都是阻塞的。
 * *read_some(buffer)*：这个函数的功能和*receive(buffer)*是一致的。
 * * receive_from(buffer, endpoint [, flags])*：这个函数异步地从一个指定的端点获取数据并写入到给定的缓冲区。在读完所有数据或者错误出现之前，这个函数都是阻塞的。
@@ -793,9 +793,9 @@ memset(buff,1024, 0);
 sock.receive(buffer(buff) );
 ```
 
-下面的是一些告诉你如何同步或异步地从不同类型的套接字读取数据的例子：
+下面的是一些教你如何同步或异步地从不同类型的套接字上读取数据的例子：
 
-* 例子1是对一个TCP套接字进行同步的读写：
+* 例1是在一个TCP套接字上进行同步读写：
 ```
 ip::tcp::endpoint ep( ip::address::from_string("127.0.0.1"), 80);
 ip::tcp::socket sock(service);
@@ -807,7 +807,7 @@ size_t read = sock.read_some(buffer(buff));
 ```
 
 
-* 例子2是对一个UDP套接字进行同步的读写：
+* 例2是在一个UDP套接字上进行同步读写：
 ```
 ip::udp::socket sock(service);
 sock.open(ip::udp::v4());
@@ -819,9 +819,9 @@ sock.receive_from(buffer(buff), sender_ep);
 ```
 
 
-*[？注意：像上面代码片段展示的那样，使用receive_from从一个UDP套接字读取时，你需要一个默认构造的端点]*
+*[？注意：就像上述代码片段所展示的那样，使用receive_from从一个UDP套接字读取数据时，你需要构造一个默认的端点]*
 
-* 例子3是从一个UDP服务套接字中异步读取数据：
+* 例3是从一个UDP服务套接字中异步读取数据：
 ```
 using namespace boost::asio;
 io_service service;
@@ -908,7 +908,7 @@ sock.set_option(sbs);
 * *native_non_blocking()*：如果套接字是非阻塞的，这个方法返回true，否则返回false。但是，它是基于原生的套接字来调用本地的api。所以通常来说，你不需要调用这个方法（non_blocking()已经缓存了这个结果）；你只有在直接调用native_handle()这个方法的时候才需要用到这个方法。
 * *at_mark()*：如果套接字要读的是一段OOB数据，这个方法返回true。这个方法你很少会用到。
 
-###其他的考虑
+###其他需要考虑的事情
 最后要注意的一点，套接字实例不能被拷贝，因为拷贝构造方法和＝操作符是不可访问的。
 ```
 ip::tcp::socket s1(service), s2(service);
@@ -998,7 +998,7 @@ char buff[512];
 sock.async_receive(buffer(buff), on_read);
 ```
 
-基本上我们都会把缓冲区包含在一个类中以便Boost.Asio的方法能遍历这个缓冲区，比方说，你使用下面的代码：				
+基本上我们都会把缓冲区包含在一个类中以便Boost.Asio的方法能遍历这个缓冲区，比方说，使用下面的代码：				
 ```
 sock.async_receive(some_buffer, on_read);
 ```
@@ -1126,11 +1126,11 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-在这里，我向你们展示了在一个Windows文件句柄上调用*async_read*。读取前256个字符，然后把它们保存到缓冲区中，当操作结束时。*on_read*被调用，再创建*std::istream*用来传递缓冲区，读取第一行（*std::getline*），最后把它输出到命令行中。 
+在这里，我向你们展示了如何在一个Windows文件句柄上调用*async_read*。读取前256个字符，然后把它们保存到缓冲区中，当操作结束时。*on_read*被调用，再创建*std::istream*用来传递缓冲区，读取第一行（*std::getline*），最后把它输出到命令行中。 
 
 #### read_until/async_read_until方法 
 
-这些方法在条件满足之前一直读取： 
+这些方法在条件满足之前会一直读取： 
 * *async_read_until(stream, stream_buffer, delim, handler)*:这个方法启动一个异步*read*操作。*read*操作会在读取到某个分隔符时结束。分隔符可以是字符,*std::string*或者*boost::regex*。处理方法的格式为：*void handler(const boost::system::error_code & err, size_t bytes);*。
 * *async_read_until(strem, stream_buffer, completion, handler)*：这个方法和之前的方法是一样的，但是没有分隔符，而是一个完成处理方法。完成处理方法的格式为：*pair< iterator,bool > completion(iterator begin, iterator end);*，其中迭代器的类型为*buffers_iterator< streambuf::const_buffers_type >*。你需要记住的是这个迭代器是支持随机访问的。你扫描整个区间（begin，end），然后决定read操作是否应该结束。返回的结果是一个结果对，第一个成员是一个迭代器，它指向最后被这个方法访问的字符；第二个成员指定read操作是否需要结束，需要时返回true，否则返回false。
 * *read_until(stream, stream_buffer, delim)*：这个方法执行一个同步的*read*操作，参数的意义和*async_read_until*一样。
@@ -1180,12 +1180,12 @@ int main(int argc, char* argv[]) {
 ```
 
 ### 异步编程
-这部分对异步编程时可能碰到的一些问题进行了深入的探究。在读了一遍之后，我建议在接下来学习这本书的过程中，经常回过头来再读读，从而增强你对这部分的理解。
+这部分对异步编程时可能碰到的一些问题进行了深入的探究。我建议你先读一遍，然后在接下来读这本书的过程中，再经常回过头来看看，从而增强你对这部分的理解。
 #### 异步的需求
 
 就像我之前所说的，同步编程比异步编程简单很多。这是因为，线性的思考是很简单的（调用A，调用A结束，调用B，调用B结束，然后继续，这是以事件处理的方式来思考）。后面你会碰到这种情况，比如：五件事情，你不知道它们执行的顺序，也不知道他们是否会执行！
 
-尽管异步编程更难，但是你会更倾向于它，比如：写一个需要处理很多并发访问的服务端。并发访问越多，异步编程就比同步编程越简单。
+尽管异步编程更难，但是你会更倾向于选择使用它，比如：写一个需要处理很多并发访问的服务端。并发访问越多，异步编程就比同步编程越简单。
 
 假设：你有一个需要处理1000个并发访问的应用，从客户端发给服务端的每个信息都会再返回给客户端，以‘\n’结尾。
 
@@ -1223,9 +1223,9 @@ void on_read_msg(client & c, const std::string & msg) {
 }
 ```
 
-有一件事情是你在任何服务端（和任何基于网络的应用）都需要避免的，就是代码无响应。在我们的例子里，我们需要*handle_clients()*方法尽可能少的阻塞。如果方法在任何点上阻塞，任何进来的信息都需要等待方法解除阻塞然后再去处理它们。
+有一种情况是在任何服务端（和任何基于网络的应用）都需要避免的，就是代码无响应的情况。在我们的例子里，我们需要*handle_clients()*方法尽可能少的阻塞。如果方法在某个点上阻塞，任何进来的信息都需要等待方法解除阻塞才能被处理。
 
-为了保持响应，只在一个套接字有数据的时候我们才读，也就是说，*if ( clients[i].sock.available() ) on_read(clients[i])*。在*on_read*时，我们只读当前可用的；调用*read_until(c.sock, buffer(...),  '\n')*会是一个非常糟糕的选择，因为直到我们从一个指定的客户端读取了完整的消息之前，它都会是阻塞的（我们永远不知道它什么时候会读取到完整的消息）
+为了保持响应，只在一个套接字有数据的时候我们才读，也就是说，*if ( clients[i].sock.available() ) on_read(clients[i])*。在*on_read*时，我们只读当前可用的；调用*read_until(c.sock, buffer(...),  '\n')*会是一个非常糟糕的选择，因为直到我们从一个指定的客户端读取了完整的消息之前，它都是阻塞的（我们永远不知道它什么时候会读取到完整的消息）
 
 这里的瓶颈就是*on_read_msg()*方法；当它执行时，所有进来的消息都在等待。一个良好的*on_read_msg()*方法实现会保证这种情况基本不会发生，但是它还是会发生（有时候向一个套接字写入数据，缓冲区满了时，它会被阻塞）
 同步方式的代码，10个线程
@@ -1268,11 +1268,11 @@ void on_read_msg(client & c, const std::string & msg) {
 }
 ```
 
-为了使用多线程，我们需要对线程进行同步，这就是*set_reading()*和*set_unreading()*所做的。*set_reading()*方法非常重要，比如你想要一步实现“判断是否在读取然后标记为读取中”。但这是有两步的（“判断是否在读取”和“标记为读取中”），你可能会有两个线程同时为一个客户端判断是否在读取，然后你会有两个线程同时为一个客户端调用*on_read*，结果就是数据冲突甚至可能导致应用崩溃。
+为了使用多线程，我们需要对线程进行同步，这就是*set_reading()*和*set_unreading()*所做的。*set_reading()*方法非常重要，比如你想要一步实现“判断是否在读取然后标记为读取中”。但这是有两步的（“判断是否在读取”和“标记为读取中”），你可能会有两个线程同时为一个客户端判断是否在读取，然后你会有两个线程同时为一个客户端调用*on_read*，结果就是数据冲突甚至导致应用崩溃。
 
 你会发现代码变得极其复杂。
 
-同步编程有第三个选择，就是为每个连接开辟一个线程。但是当并发的线程增加时，这就成了一个最不希望出现的情况。
+同步编程有第三个选择，就是为每个连接开辟一个线程。但是当并发的线程增加时，这就成了一种灾难性的情况。
 
 然后，让我们来看异步编程。我们不断地异步读取。当一个客户端请求某些东西时，*on_read*被调用，然后回应，然后等待下一个请求（然后开始另外一个异步的read操作）。
 
@@ -1307,10 +1307,10 @@ void on_read(client & c, const error_code & err, size_t read_bytes) {
 }
 ```
 
-发现代码变得有多简单了吧？client结构里面只有两个成员，*handle_clients()*仅仅调用了*async_read_until*，然后它创建了10个线程，每个线程都调用*service.run()*。这些线程会处理任何来自客户端的异步read操作，然后分发任何向客户端的异步write操作。另外需要注意的一件事情是：*on_read()*一直在为下一次异步read操作做准备（看最后一行代码）。
+发现代码变得有多简单了吧？client结构里面只有两个成员，*handle_clients()*仅仅调用了*async_read_until*，然后它创建了10个线程，每个线程都调用*service.run()*。这些线程会处理所有来自客户端的异步read操作，然后分发所有向客户端的异步write操作。另外需要注意的一件事情是：*on_read()*一直在为下一次异步read操作做准备（看最后一行代码）。
 
 ####异步run(), run_one(), poll(), poll_ one()
-为了实现监听循环，*io_service*类提供了4个方法，比如：*run(), run_one(), poll()*和*poll_one()*。虽然大多数时候你使用*service.run()*就可以，但是你还是需要在这里学习其他方法完成的功能。
+为了实现监听循环，*io_service*类提供了4个方法，比如：*run(), run_one(), poll()*和*poll_one()*。虽然大多数时候使用*service.run()*就可以，但是你还是需要在这里学习其他方法实现的功能。
 
 ##### 持续运行
 再一次说明，如果有等待执行的操作，*run()*会一直执行，直到你手动调用*io_service::stop()*。为了保证*io_service*一直执行，通常你添加一个或者多个异步操作，然后在它们被执行时，你继续一直不停地添加异步操作，比如下面代码：
@@ -1403,7 +1403,7 @@ service.poll(); // 或者
 while ( service.poll_one()) ;
 ```
 
-所有上述方法都会在失败的时候抛出*boost::system::system_error*异常。这是不允许发生的事情；这里抛出的异常通常都是致命的，也许是资源耗尽，或者是你handler的其中一个抛出了异常。另外，每个方法都有一个不抛出异常，而是返回一个*boost::system::error_code*的重载：
+所有上述方法都会在失败的时候抛出*boost::system::system_error*异常。这是我们所不希望发生的事情；这里抛出的异常通常都是致命的，也许是资源耗尽，或者是你handler的其中一个抛出了异常。另外，每个方法都有一个不抛出异常，而是返回一个*boost::system::error_code*的重载：
 ```
 io_service service;
 boost::system::error_code err = 0;
@@ -1661,7 +1661,7 @@ int main(int argc, char* argv[]) {
 
 当实例被启动时（*start()*），它会等待客户端的连接。当连接发生时。*on_connect()*被调用。如果没有错误发生，它启动一个read操作（*do_read()*）。当read操作结束时，你就可以解析这个消息；当然你应用的*on_read()*看起来会各种各样。而当你写回一个消息时，你需要把它拷贝到缓冲区，然后像我在*do_write()*方法中所做的一样将其发送出去，因为这个缓冲区同样需要在这个异步写操作中一直存活。最后需要注意的一点——当写回时，你需要指定写入的数量，否则，整个缓冲区都会被发送出去。
 ###总结
-网络api实际上要大得多，这个章节只是做为一个参考，当你在实现自己的网络应用时可以回来查看。
+网络api实际上要繁杂得多，这个章节只是做为一个参考，当你在实现自己的网络应用时可以回过头来看看。
 
 Boost.Asio实现了端点的概念，你可以认为是IP和端口。如果你不知道准确的IP，你可以使用*resolver*对象将主机名，例如*www.yahoo.com*转换为一个或多个IP地址。
 
@@ -3718,4 +3718,6 @@ if (fork() == 0) {
 
 最终，如果已经知道应用是针对专门的操作系统的，你可以享用Boost.Asio为那个特定的操作系统准备的特性。
 
-网络编程在当前是非常重要的。Boost.Asio作为任何21世纪C++程序员的必学内容，我们对其理论进行深入理解之后并付诸实践。因为里面的内容都可以很简单的阅读，测试，理解和扩展，所以你可以把本书当作一个参考以及便携的Boost.Asio例子的库。希望你能以读本书为乐，以编程为乐。
+就目前来说，网络编程是非常重要的。作为21世纪所有C++程序员的必学内容，我们对Boost.Asio的理论进行了深入理解并付诸实践。因为本书的内容都可以很简单的进行阅读、测试、理解和扩展，所以你可以把它当作一个参考以及便携的Boost.Asio样例库。
+
+最后，希望你能以读本书为乐，以编程为乐。
