@@ -853,7 +853,7 @@ int main(int argc, char* argv[]) {
 这些是你可以获取/设置的套接字选项：
 
 | 名字 | 描述 | 类型 |
-| -- | -- | -- |
+|-----|-----|------|
 | broadcast | 如果为true，允许广播消息 | bool |
 | debug | 如果为true，启用套接字级别的调试 | bool | 
 |do_not_route | 如果为true，则阻止路由选择只使用本地接口 | bool | 
@@ -889,7 +889,7 @@ sock.set_option(sbs);
 就像我之前所说，不是所有的成员方法在所有的套接字类中都可用。我做了一个包含成员函数不同点的列表。如果一个成员函数没有出现在这，说明它在所有的套接字类都是可用的。
 
 | 名字 | TCP | UDP | ICMP |
-| -- | -- | -- | -- |
+|-----|-----|-----|------|
 |async_read_some | 是 | - | - |
 |async_receive_from | - | 是 | 是 |
 |async_write_some | 是 | - | - |
