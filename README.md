@@ -853,7 +853,7 @@ int main(int argc, char* argv[]) {
 这些是你可以获取/设置的套接字选项：
 
 | 名字 | 描述 | 类型 |
-| -- | -- |
+| -- | -- | -- |
 | broadcast | 如果为true，允许广播消息 | bool |
 | debug | 如果为true，启用套接字级别的调试 | bool | 
 |do_not_route | 如果为true，则阻止路由选择只使用本地接口 | bool | 
