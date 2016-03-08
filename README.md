@@ -3562,7 +3562,7 @@ int err_file = open("err.txt", O_WRONLY);
 dup2(err_file, STDERR_FILENO);
 ```
 ### SSL
-Boost.Asio提供了一些支持基本SSL的类。它在幕后使用的其实是OpenSSL，所以，如果你想使用SSL，首先从[www.openssl.org](www.openssl.org)下载OpenSSL然后构建它。你需要注意，构建OpenSSL通常来说不是一个简单的任务，尤其是你没有一个常用的编译器，比如Visual Studio。
+Boost.Asio提供了一些支持基本SSL的类。它在幕后使用的其实是OpenSSL，所以，如果你想使用SSL，首先从[www.openssl.org](https://www.openssl.org)下载OpenSSL然后构建它。你需要注意，构建OpenSSL通常来说不是一个简单的任务，尤其是你没有一个常用的编译器，比如Visual Studio。
 
 假如你成功构建了OpenSSL，Boost.Asio就会有一些围绕它的封装类：
 * *ssl::stream*：它代替*ip:<protocol>::socket*来告诉你用什么
