@@ -3636,7 +3636,7 @@ std::cout << msg << std::endl;
 *random_access_handle*类只有在I/O完成处理端口在使用中才有效（这是默认情况）。如果情况满足，*BOOST_ASIO_HAS_WINDOWS_RANDOM_ACCESS_HANDLE*就被定义
 #### 对象句柄
 你可以通过Windows句柄等待内核对象，比如修改通知，控制台输入，事件，内存资源通知，进程，信号量，线程或者可等待的计时器。或者简单来说，所有可以调用*WaitForSingleObject*的东西。你可以在它们上面创建一个*object_handle*封装，然后在上面使用*wait()*或者*async_wait()*：
-```
+```cpp
 void on_wait_complete(boost::system::error_code err) {}
 ...
 HANDLE evt = ::CreateEvent(0, true, true, 0);
@@ -3654,13 +3654,13 @@ Boost.Asio提供了对本地socket的基本支持（也就是著名的Unix 域so
 本地socket是一种只能被运行在主机上的应用访问的socket。你可以使用本地socket来实现简单的进程间通讯，连接两端的方式是把一个当作客户端而另一个当作服务端。对于本地socket，端点是一个文件，比如*/tmp/whatever*。很酷的一件事情是你可以给指定的文件赋予权限，从而禁止机器上指定的用户在文件上创建socket。
 
 你可以用客户端socket的方式连接，如下面的代码片段：
-```
+```cpp
 local::stream_protocol::endpoint ep("/tmp/my_cool_app");
 local::stream_protocol::socket sock(service);
 sock.connect(ep);
 ```
 你可以创建一个服务端socket，如下面的代码片段：
-```
+```cpp
 ::unlink("/tmp/my_cool_app");
 local::stream_protocol::endpoint ep("/tmp/my_cool_app");
 local::stream_protocol::acceptor acceptor(service, ep);
