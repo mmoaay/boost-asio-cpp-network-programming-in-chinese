@@ -1701,7 +1701,7 @@ size_t read_complete(char * buf, const error_code & err, size_t bytes)
     return found ? 0 : 1;
 }
 void sync_echo(std::string msg) {
-    msg += "\n”;
+    msg += "\n";
     ip::tcp::socket sock(service);
     sock.connect(ep);
     sock.write_some(buffer(msg));
