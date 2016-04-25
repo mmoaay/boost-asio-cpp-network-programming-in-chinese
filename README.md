@@ -1369,7 +1369,7 @@ bool write_complete = false;
 void on_write(const boost::system::error_code & err, size_t bytes)
 { write_complete = true; }
  …
-std::string data = "login ok”;
+std::string data = "login ok";
 write_complete = false;
 async_write(sock, buffer(data), on_write);
 do service.run_once() while (!write_complete);
@@ -1701,7 +1701,7 @@ size_t read_complete(char * buf, const error_code & err, size_t bytes)
     return found ? 0 : 1;
 }
 void sync_echo(std::string msg) {
-    msg += "\n”;
+    msg += "\n";
     ip::tcp::socket sock(service);
     sock.connect(ep);
     sock.write_some(buffer(msg));
